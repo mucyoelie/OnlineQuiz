@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inertial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <div class="quiz-container">
+        <h1>Science & Mathematic Quiz</h1>
+        <div id="timer">Time Left: <span id="time">60</span>Second</div>
+        <div class="question" id="question-1">
+            <p>Question 1:what is 0 * 20</p>
+            <input type="radio" name="q1" value="1" required> 1<br>
+            <input type="radio" name="q1" value="20"> 20<br>
+            <input type="radio" name="q1" value="0" class="correct"> 0<br>
+            <input type="radio" name="q1" value="None Above"> None Above<br>
+            <button onclick="nextQuestion(2)">Next</button>
+        </div>
+      <div class="question" id="question-2" style="display:none">
+        <p>Question 2:How many side of Square?</p>
+        <input type="radio" name="q2" value="7"> 7<br>
+        <input type="radio" name="q2" value="5"> 5<br>
+        <input type="radio" name="q2" value="4" class="correct"> 4<br>
+        <input type="radio" name="q2" value="All of Above"> All of Above <br>
+        <button onclick="nextQuestion(1)">Previous</button>
+        <button onclick="nextQuestion(3)">Next</button>
+    </div>
+    <div class="question" id="question-3" style="display: none;">
+        <p>Question 3:Who is the father of computer</p>
+        <input type="radio" name="q3" value="Charles Babbage" class="correct"> Charles Babbage<br>
+        <input type="radio" name="q3" value="Lionel Messi"> Lionel Messi<br>
+        <input type="radio" name="q3" value="Paul Kagame"> Paul Kagame<br>
+        <input type="radio" name="q3" value="Issac Newton"> Issac Newton<br>
+        <button onclick="nextQuestion(2)">Previous</button>
+        <button onclick="nextQuestion(4)">Next</button>
+    </div>
+    <div class="question" id="question-4" style="display: none;">
+        <p>Question 4:Which the general formular to calculate power in terms of current?</p>
+        <input type="radio" name="q4" value="Volume/density">Volume/density<br>
+        <input type="radio" name="q4" value="I*V" class="correct">I*V<br>
+        <input type="radio" name="q4" value="V/R">V/R<br>
+        <input type="radio" name="q4" value="Mass * Acceleration">Mass * Accelation<br>
+        <button onclick="nextQuestion(3)">Previous</button>
+        <button onclick="nextQuestion(5)">Next</button>
+    </div>
+    <div class="question" id="question-5" style="display:none">
+        <p>Question 5:Select Ohm's law in the following and we know that Ohm's can be expressed as:</p>
+        <input type="radio" name="q5" value="All of Above">All of Above<br>
+        <input type="radio" name="q5" value="None of Above">None of Above<br>
+        <input type="radio" name="q5" value="F=Mass * Acceleration">F=Mass * Acceleration<br>
+        <input type="radio" name="q5" value="I=V/R" class="correct">I=V/R<br>
+        <button onclick="nextQuestion(4)">Previous</button>
+        <button onclick="nextQuestion(6)">Next</button>
+    </div>
+    <div class="question" id="question-6" style="display: none;">
+        <p>Question 6:Select special meaning of word "Insulator"</p>
+        <input type="radio" name="q6" value="is a material that does not conduct electrical 
+        current under normal conditions." class="correct">
+        is a material that does not conduct electrical 
+        current under normal conditions<br>
+        <input type="radio" name="q6" value="is a material that easily conducts electrical current">
+        is a material that easily conducts electrical current<br>
+        <input type="radio" name="q6" value="is a process of introducing impurities into an extremely pure semiconductor">
+        is a process of introducing impurities into an extremely pure semiconductor<br>
+        <input type="radio" name="q6" value="All of Above">All of Above<br>
+        <button onclick="nextQuestion(5)">Previous</button>
+        <button onclick="nextQuestion(7)">Next</button>
+    </div>
+    <div class="question" id="question-7" style="display: none;">
+        <p>Question 7:Which the planet that is so hot more than other?</p>
+        <input type="radio" name="q7" value="Earth">Earth<br>
+        <input type="radio" name="q7" value="Mars">Mars<br>
+        <input type="radio" name="q7" value="Jupiter">Jupiter<br>
+        <input type="radio" name="q7" value="Mercury" class="correct">Mercury<br>
+        <button onclick="nextQuestion(6)">Previous</button>
+        <button onclick="nextQuestion(8)">Next</button>
+    </div>
+    <div class="question" id="question-8" style="display: none;">
+        <p>Question 8:Select Kirchhoff's Law in the following</p>
+        <input type="radio" name="q8" value="It is conservation of linear momentum and kinetic energy">
+        It is conservation of linear momentum and kinetic energy<br>
+        <input type="radio" name="q8" value="It is conservation of linear momentum of kinetic energy">
+        It is conservation of linear momentum of kinetic energy<br>
+        <input type="radio" name="q8" value="The maximum energy of photoelectron do not depend on the intensity of incident
+        light but relies on the frequency of light">
+        The maximum energy of photoelectron do not depend on the intensity of incident
+        light but relies on the frequency of light<br>
+        <input type="radio" name="q8" value="The sum of the current entering any junction in circuit equal to the sum of the current
+        leaving that junction" class="correct">
+        The sum of the current entering any junction in circuit equal to the sum of the current
+        leaving that junction<br>
+        <button onclick="nextQuestion(7)">Previous</button>
+        <button onclick="nextQuestion(9)">Next</button>
+    </div>
+    <div class="question" id="question-9" style="display:none">
+        <p>Question 9:we know that how to calculate derivative of function.</p>
+        <p>What is the derivative of  F(x) = 3x -10?</p>
+        <input type="radio" name="q9" value="8">8<br>
+        <input type="radio" name="q9" value="0">0<br>
+        <input type="radio" name="q9" value="3" class="correct">3<br>
+        <input type="radio" name="q9" value="None of Above">None of Above<br>
+        <button onclick="nextQuestion(8)">Previous</button>
+        <button onclick="nextQuestion(10)">Next</button>
+    </div>
+    <div class="question" id="question-10" style="display:none;">
+        <p>Question 10:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q10" value="Is type of motion where restoring force is directly proportional to
+        the displacement and acts in the direction opposition to that displacement" class="correct">
+        Is type of motion where restoring force is directly proportional to
+        the displacement and acts in the direction opposition to that displacement<br>
+        <input type="radio" name="q10" value="When an object capable of oscillating has a force applied to it with
+        a frequency equal to its natural frequency to oscillation">
+        When an object capable of oscillating has a force applied to it with
+        a frequency equal to its natural frequency to oscillation<br>
+        <input type="radio" name="q10" value="Line joining the sum and planet sweep out equal areas in equal time">
+        Line joining the sum and planet sweep out equal areas in equal time<br>
+        <input type="radio" name="q10" value="Atom theory is a model developed to explain the properties and behaviour of atoms">
+        Atom theory is a model developed to explain the properties and behaviour of atoms<br>
+        <button onclick="nextQuestion(9)">Previous</button>
+        <button onclick="nextQuestion(11)">Next</button>
+    </div>
+    <div class="question" id="question-11" style="display:none;">
+        <p>Question 11:Rectification is....... </p>
+        <input type="radio" name="q11" value="Is the maximum voltage diode that can withstand in reverse biased without breakdown">
+        Is the maximum voltage diode that can withstand in reverse biased without breakdown<br>
+        <input type="radio" name="q11" value="Is the process of converting alternating current(AC) to direct current(DC)" class="correct">
+        Is the process of converting alternating current(AC) to direct current(DC)<br>
+        <input type="radio" name="q11" value="Photocurrent is directly proportional to intensity of light and it independent of 
+        frequency">Photocurrent is directly proportional to intensity of light and it independent of 
+        frequency<br>
+        <input type="radio" name="q11" value="The angular momentum P electrons are whole number multiple of h/2pi">
+        The angular momentum P electrons are whole number multiple of h/2pi<br>
+        <button onclick="nextQuestion(10)">Previous</button>
+        <button onclick="nextQuestion(12)">Next</button>
+    </div>
+    <div class="question" id="question-12" style="display:none;">
+        <p>Question 12:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q12" value=""><br>
+        <input type="radio" name="q12" value=""><br>
+        <input type="radio" name="q12" value=""><br>
+        <input type="radio" name="q12" value=""><br>
+        <button onclick="nextQuestion(11)">Previous</button>
+        <button onclick="nextQuestion(13)">Next</button>
+    </div>
+    <div class="question" id="question-13" style="display:none;">
+        <p>Question 13:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q13" value=""><br>
+        <input type="radio" name="q13" value=""><br>
+        <input type="radio" name="q13" value=""><br>
+        <input type="radio" name="q13" value=""><br>
+        <button onclick="nextQuestion(12)">Previous</button>
+        <button onclick="nextQuestion(14)">Next</button>
+    </div>
+    <div class="question" id="question-14" style="display:none;">
+        <p>Question 14:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q14" value=""><br>
+        <input type="radio" name="q14" value=""><br>
+        <input type="radio" name="q14" value=""><br>
+        <input type="radio" name="q14" value=""><br>
+        <button onclick="nextQuestion(13)">Previous</button>
+        <button onclick="nextQuestion(15)">Next</button>
+    </div>
+    <div class="question" id="question-15" style="display:none;">
+        <p>Question 15:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q15" value=""><br>
+        <input type="radio" name="q15" value=""><br>
+        <input type="radio" name="q15" value=""><br>
+        <input type="radio" name="q15" value=""><br>
+        <button onclick="nextQuestion(14)">Previous</button>
+        <button onclick="nextQuestion(16)">Next</button>
+    </div>
+    <div class="question" id="question-16" style="display:none;">
+        <p>Question 16:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q16" value=""><br>
+        <input type="radio" name="q16" value=""><br>
+        <input type="radio" name="q16" value=""><br>
+        <input type="radio" name="q16" value=""><br>
+        <button onclick="nextQuestion(15)">Previous</button>
+        <button onclick="nextQuestion(17)">Next</button>
+    </div>
+    <div class="question" id="question-17" style="display:none;">
+        <p>Question 17:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q17" value=""><br>
+        <input type="radio" name="q17" value=""><br>
+        <input type="radio" name="q17" value=""><br>
+        <input type="radio" name="q17" value=""><br>
+        <button onclick="nextQuestion(16)">Previous</button>
+        <button onclick="nextQuestion(18)">Next</button>
+        </div>
+        <div class="question" id="question-18" style="display:none;">
+            <p>Question 18:Simple Harmonic Motion(SHM) is...... </p>
+            <input type="radio" name="q18" value=""><br>
+            <input type="radio" name="q18" value=""><br>
+            <input type="radio" name="q18" value=""><br>
+            <input type="radio" name="q18" value=""><br>
+            <button onclick="nextQuestion(17)">Previous</button>
+            <button onclick="nextQuestion(19)">Next</button>
+    </div>
+    <div class="question" id="question-19" style="display:none;">
+        <p>Question 19:Simple Harmonic Motion(SHM) is...... </p>
+        <input type="radio" name="q19" value=""><br>
+        <input type="radio" name="q19" value=""><br>
+        <input type="radio" name="q19" value=""><br>
+        <input type="radio" name="q19" value=""><br>
+        <button onclick="nextQuestion(18)">Previous</button>
+        <button onclick="nextQuestion(20)">Next</button>
+    </div>
+    <div class="question" id="question-20" style="display: none;">
+        <p>Question 20:Which correct formula to calculate Delta in Mathematics</p>
+        <input type="radio" name="q20" value="Delta = (b * b )- (4 * a * c)" class="correct">Delta = (b * b )- (4 * a * c)<br>
+        <input type="radio" name="q20" value="Delta = s * c /4">Delta = s * c /4<br>
+        <input type="radio" name="q20" value="Delta = Mass / Volume">Delta = Mass / Volume<br>
+        <input type="radio" name="q20" value="None of Above">None of Above<br>
+        <button onclick="nextQuestion(19)">Previous</button>
+        <button onclick="submitQuiz()">Submit</button>
+    </div>
+    <p id="result"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
