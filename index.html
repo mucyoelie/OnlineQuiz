@@ -5,15 +5,35 @@
     <meta name="viewport" content="width=device-width, inertial-scale=1.0">
     <title>Online Quiz</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Quiz.png" type="Image">
 </head>
+<header>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()"></div>
+        <ul class="container" id="nav-menu">
+            <li>Home</li>
+            <li>Science & Mathematics</li>
+            <li>History</li>
+            <li>Technology</li>
+            <li>Entertainment</li>
+            <li>sport</li>
+            <button>Sign up</button>
+            <button>Sign in</button>
+        </ul>
+    </nav>
+</header>
 <body>
-   
+    <div class="Home-page">
+        <h1>Welcome to QuizMaster!</h1>
+        <p>Test your knowledge with our fun and challenging quizzes.</p>
+     <button>Get Started</button>
+    </div>
     <div class="quiz-container">
         <h1>Science & Mathematic Quiz</h1>
-        <div id="timer">Time Left: <span id="time">60</span>Second</div>
+        <div class="timer" id="timer">Time left: 20 Minutes</div>
         <div class="question" id="question-1">
             <p>Question 1:what is 0 * 20</p>
-            <input type="radio" name="q1" value="1" required> 1<br>
+            <input type="radio" name="q1" value="1" required> 1<br> 
             <input type="radio" name="q1" value="20"> 20<br>
             <input type="radio" name="q1" value="0" class="correct"> 0<br>
             <input type="radio" name="q1" value="None Above"> None Above<br>
@@ -137,74 +157,74 @@
         <button onclick="nextQuestion(12)">Next</button>
     </div>
     <div class="question" id="question-12" style="display:none;">
-        <p>Question 12:Simple Harmonic Motion(SHM) is...... </p>
-        <input type="radio" name="q12" value=""><br>
-        <input type="radio" name="q12" value=""><br>
-        <input type="radio" name="q12" value=""><br>
-        <input type="radio" name="q12" value=""><br>
+        <p>Question 12:What is the value of x in the equation 2x + 5 = 11? </p>
+        <input type="radio" name="q12" value="2">2<br>
+        <input type="radio" name="q12" value="3">3<br>
+        <input type="radio" name="q12" value="4">4<br>
+        <input type="radio" name="q12" value="5">5<br>
         <button onclick="nextQuestion(11)">Previous</button>
         <button onclick="nextQuestion(13)">Next</button>
     </div>
     <div class="question" id="question-13" style="display:none;">
-        <p>Question 13:Simple Harmonic Motion(SHM) is...... </p>
-        <input type="radio" name="q13" value=""><br>
-        <input type="radio" name="q13" value=""><br>
-        <input type="radio" name="q13" value=""><br>
-        <input type="radio" name="q13" value=""><br>
+        <p>Question 13:A bag contains 5 red balls, 3 blue balls, and 2 green balls. If a ball is drawn at random from the bag, what is the probability that it is not blue? </p>
+        <input type="radio" name="q13" value="1/2">1/2<br>
+        <input type="radio" name="q13" value="2/3">2/3<br>
+        <input type="radio" name="q13" value="5/8">5/8<br>
+        <input type="radio" name="q13" value="None of Above" class="correct">None of Above<br>
         <button onclick="nextQuestion(12)">Previous</button>
         <button onclick="nextQuestion(14)">Next</button>
     </div>
     <div class="question" id="question-14" style="display:none;">
-        <p>Question 14:Simple Harmonic Motion(SHM) is...... </p>
-        <input type="radio" name="q14" value=""><br>
-        <input type="radio" name="q14" value=""><br>
-        <input type="radio" name="q14" value=""><br>
-        <input type="radio" name="q14" value=""><br>
+        <p>Question 14:What is the value of y in the equation 2y + 5 = 13? </p>
+        <input type="radio" name="q14" value="3">3<br>
+        <input type="radio" name="q14" value="4">6<br>
+        <input type="radio" name="q14" value="5">5<br>
+        <input type="radio" name="q14" value="6" class="correct">4<br>
         <button onclick="nextQuestion(13)">Previous</button>
         <button onclick="nextQuestion(15)">Next</button>
     </div>
     <div class="question" id="question-15" style="display:none;">
-        <p>Question 15:Simple Harmonic Motion(SHM) is...... </p>
-        <input type="radio" name="q15" value=""><br>
-        <input type="radio" name="q15" value=""><br>
-        <input type="radio" name="q15" value=""><br>
-        <input type="radio" name="q15" value=""><br>
+        <p>Question 15:What is the process by which water moves through a plant, from the roots to the leaves, and is then released into the air as water vapor?</p>
+        <input type="radio" name="q15" value="Respiration">Respiration<br>
+        <input type="radio" name="q15" value="Photosynthesis">Photosynthesis<br>
+        <input type="radio" name="q15" value="Transpiration" class="correct">Transpiration<br>
+        <input type="radio" name="q15" value="Evaporation">Evaporation<br>
         <button onclick="nextQuestion(14)">Previous</button>
         <button onclick="nextQuestion(16)">Next</button>
     </div>
     <div class="question" id="question-16" style="display:none;">
-        <p>Question 16:Simple Harmonic Motion(SHM) is...... </p>
-        <input type="radio" name="q16" value=""><br>
-        <input type="radio" name="q16" value=""><br>
-        <input type="radio" name="q16" value=""><br>
-        <input type="radio" name="q16" value=""><br>
+        <p>Question 16:What is the process by which plants convert sunlight into energy? </p>
+        <input type="radio" name="q16" value="Respiration">Respiration<br>
+        <input type="radio" name="q16" value=" Photosynthesis" class="correct"> Photosynthesis<br>
+        <input type="radio" name="q16" value="Decomposition">Decomposition<br>
+        <input type="radio" name="q16" value="Fermentation">Fermentation<br>
         <button onclick="nextQuestion(15)">Previous</button>
         <button onclick="nextQuestion(17)">Next</button>
     </div>
     <div class="question" id="question-17" style="display:none;">
-        <p>Question 17:Simple Harmonic Motion(SHM) is...... </p>
-        <input type="radio" name="q17" value=""><br>
-        <input type="radio" name="q17" value=""><br>
-        <input type="radio" name="q17" value=""><br>
-        <input type="radio" name="q17" value=""><br>
+        <p>Question 17:What is the scientific term for the "building blocks of life"? </p>
+        <input type="radio" name="q17" value="Cells" class="correct">Cells<br>
+        <input type="radio" name="q17" value=" Molecules"> Molecules<br>
+        <input type="radio" name="q17" value="Tissues">Tissues<br>
+        <input type="radio" name="q17" value="Organisms">Organisms<br>
         <button onclick="nextQuestion(16)">Previous</button>
         <button onclick="nextQuestion(18)">Next</button>
         </div>
         <div class="question" id="question-18" style="display:none;">
-            <p>Question 18:Simple Harmonic Motion(SHM) is...... </p>
-            <input type="radio" name="q18" value=""><br>
-            <input type="radio" name="q18" value=""><br>
-            <input type="radio" name="q18" value=""><br>
-            <input type="radio" name="q18" value=""><br>
+            <p>Question 18:What is the largest planet in our solar system? </p>
+            <input type="radio" name="q18" value="Earth">Earth<br>
+            <input type="radio" name="q18" value="Uranus">Uranus<br>
+            <input type="radio" name="q18" value="Saturn">Saturn<br>
+            <input type="radio" name="q18" value="Jupiter" class="correct">Jupiter<br>
             <button onclick="nextQuestion(17)">Previous</button>
             <button onclick="nextQuestion(19)">Next</button>
     </div>
     <div class="question" id="question-19" style="display:none;">
-        <p>Question 19:Simple Harmonic Motion(SHM) is...... </p>
-        <input type="radio" name="q19" value=""><br>
-        <input type="radio" name="q19" value=""><br>
-        <input type="radio" name="q19" value=""><br>
-        <input type="radio" name="q19" value=""><br>
+        <p>Question 19:What is the primary gas found in the Earth's atmosphere? </p>
+        <input type="radio" name="q19" value="Oxygen">Oxygen<br>
+        <input type="radio" name="q19" value="Nitrogen" class="correct">Nitrogen<br>
+        <input type="radio" name="q19" value="Carbon Dioxide">Carbon Dioxide<br>
+        <input type="radio" name="q19" value="Hydrogen">Hydrogen<br>
         <button onclick="nextQuestion(18)">Previous</button>
         <button onclick="nextQuestion(20)">Next</button>
     </div>

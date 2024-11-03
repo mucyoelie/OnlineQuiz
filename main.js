@@ -9,27 +9,40 @@ function nextQuestion(questionNumber ){
 function submitQuiz(){
     alert('Quiz Submitted!');
 }
-function calculateScore(){
-    let correctAnswer = {
-        q1:"0",
-        q2:"4",
-        q3:"Charles Babbage",
-        q4:"I*V",
-        q5:"I=V/R",
-        q6:"",
-        q7:"",
-        q8:"",
-        q9:"",
-        q10:""
-    }
-;
-let score = 0;
-let totalQuestion = 17;
- const userAnswers = new FormData(document.getElementsByClassName('quiz-container'));
- for(let [question,answer] of userAnswers.entries()){
-    if(answer === correctAnswers[question]){
-        score++;
-    }
- }
- document.getElementById('result').textContent = 'Your score is  ${score}/${totalQuestions} ';
+
+let timer;
+let timeLeft = 1200; // 10 seconds for each question
+
+function startTimer() {
+    // Clear any existing timer
+    clearInterval(timer);
+    timeLeft = 1200;
+
+    // Update timer display every second
+    timer = setInterval(function() {
+        document.getElementById("timer").innerText = `Time left: ${timeLeft} seconds`;
+        timeLeft--;
+
+        // If time runs out, move to the next question automatically
+        if (timeLeft < 0) {
+            clearInterval(timer);
+            alert("Time's up!");
+            nextQuestion(3); // Move to the next question or handle accordingly
+        }
+    }, 1000);
 }
+
+// Example function to show a question and start timer
+function showQuestion(id) {
+    // Hide all questions
+    document.querySelectorAll(".question").forEach(q => q.style.display = "none");
+    // Show current question
+    document.getElementById(`question-${id}`).style.display = "block";
+    startTimer(); // Start the timer each time a question is shown
+}
+
+// Call showQuestion when navigating between questions
+function nextQuestion(id) {
+    showQuestion(id); // Display the next question
+}
+
